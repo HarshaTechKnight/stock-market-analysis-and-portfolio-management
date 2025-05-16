@@ -1,3 +1,4 @@
+
 import NewsCard from '@/components/news/NewsCard';
 import type { NewsArticle } from '@/types';
 import { Input } from '@/components/ui/input';
@@ -10,7 +11,7 @@ const mockNews: NewsArticle[] = [
     source: 'Wall Street Journal',
     date: '2024-05-15T10:30:00Z',
     summary: 'The Federal Reserve hinted at possible interest rate reductions in the latter half of the year, citing cooling inflation and a stabilizing job market. Markets reacted positively to the news.',
-    imageUrl: 'https://placehold.co/600x338.png', // approx 16:9
+    // imageUrl: 'https://placehold.co/600x338.png', // imageUrl is kept in mock data but not used by NewsCard
     articleUrl: '#',
   },
   {
@@ -19,7 +20,7 @@ const mockNews: NewsArticle[] = [
     source: 'Bloomberg',
     date: '2024-05-14T15:45:00Z',
     summary: 'Several leading technology companies reported better-than-expected quarterly earnings, fueling a broad rally in the tech sector. Investor sentiment remains bullish on AI and cloud computing.',
-    imageUrl: 'https://placehold.co/600x338.png',
+    // imageUrl: 'https://placehold.co/600x338.png',
     articleUrl: '#',
   },
   {
@@ -28,7 +29,7 @@ const mockNews: NewsArticle[] = [
     source: 'Reuters',
     date: '2024-05-15T08:00:00Z',
     summary: 'Crude oil prices saw increased volatility as ongoing geopolitical events in key regions raised concerns about potential supply disruptions. OPEC+ decisions are also being closely watched.',
-    imageUrl: 'https://placehold.co/600x338.png',
+    // imageUrl: 'https://placehold.co/600x338.png',
     articleUrl: '#',
   },
   {
@@ -37,7 +38,7 @@ const mockNews: NewsArticle[] = [
     source: 'Associated Press',
     date: '2024-05-13T12:00:00Z',
     summary: 'The latest retail sales figures presented a mixed picture of consumer behavior, with strong growth in e-commerce but a slight downturn in brick-and-mortar store sales.',
-    imageUrl: 'https://placehold.co/600x338.png',
+    // imageUrl: 'https://placehold.co/600x338.png',
     articleUrl: '#',
   },
    {
@@ -46,7 +47,7 @@ const mockNews: NewsArticle[] = [
     source: 'CleanTech News',
     date: '2024-05-15T11:00:00Z',
     summary: 'Government unveiled new initiatives to promote green energy, leading to a surge in stocks of renewable energy companies. Investment in solar and wind power is expected to increase significantly.',
-    imageUrl: 'https://placehold.co/600x338.png',
+    // imageUrl: 'https://placehold.co/600x338.png',
     articleUrl: '#',
   },
   {
@@ -55,7 +56,7 @@ const mockNews: NewsArticle[] = [
     source: 'CoinDesk',
     date: '2024-05-14T18:20:00Z',
     summary: 'The cryptocurrency market experienced a slight pullback as investors took profits following a sustained period of upward momentum. Long-term outlook remains debated among analysts.',
-    imageUrl: 'https://placehold.co/600x338.png',
+    // imageUrl: 'https://placehold.co/600x338.png',
     articleUrl: '#',
   },
 ];

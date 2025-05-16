@@ -3,4 +3,4 @@ import { config } from 'dotenv';
 config();
 
 import '@/ai/flows/analyze-stock-sentiment.ts';
-import '@/ai/flows/generate-news-image-flow.ts';
+// import '@/ai/flows/generate-news-image-flow.ts'; // Removed as it's no longer used
