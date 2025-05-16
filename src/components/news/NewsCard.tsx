@@ -7,23 +7,26 @@ import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { ExternalLink } from 'lucide-react';
 import { format } from 'date-fns';
-// Removed Image, Loader2, generateNewsImage, useState, useEffect imports
+import { useState, useEffect } from 'react';
 
 interface NewsCardProps {
   article: NewsArticle;
 }
 
 export default function NewsCard({ article }: NewsCardProps) {
-  // Removed useState for currentImageUrl and isGeneratingImage
-  // Removed useEffect for image generation
+  const [formattedDate, setFormattedDate] = useState<string | null>(null);
+
+  useEffect(() => {
+    // Format date on the client side after hydration
+    setFormattedDate(format(new Date(article.date), 'MMM dd, yyyy HH:mm'));
+  }, [article.date]);
 
   return (
     <Card className="flex flex-col h-full shadow-md hover:shadow-lg transition-shadow duration-200">
       <CardHeader className="pb-2">
-        {/* Removed image container and Image component */}
         <CardTitle className="text-lg font-semibold leading-snug">{article.headline}</CardTitle>
         <CardDescription className="text-xs text-muted-foreground">
-          {article.source} &bull; {format(new Date(article.date), 'MMM dd, yyyy HH:mm')}
+          {article.source} &bull; {formattedDate || 'Loading date...'}
         </CardDescription>
       </CardHeader>
       <CardContent className="flex-grow">
@@ -41,4 +44,3 @@ export default function NewsCard({ article }: NewsCardProps) {
     </Card>
   );
 }
-
