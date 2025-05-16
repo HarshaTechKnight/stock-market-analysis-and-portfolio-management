@@ -38,12 +38,12 @@ const StockFlowSchema = z.object({
 });
 
 
-export const GenerateStockTickerDataInputSchema = z.object({
+const GenerateStockTickerDataInputSchema = z.object({
   count: z.number().int().min(1).max(10).optional().default(6).describe("Number of stocks to generate (1-10)."),
 });
 export type GenerateStockTickerDataInput = z.infer<typeof GenerateStockTickerDataInputSchema>;
 
-export const GenerateStockTickerDataOutputSchema = z.object({
+const GenerateStockTickerDataOutputSchema = z.object({
   stocks: z.array(StockFlowSchema).describe("An array of generated stock data."),
 });
 export type GenerateStockTickerDataOutput = z.infer<typeof GenerateStockTickerDataOutputSchema>;
