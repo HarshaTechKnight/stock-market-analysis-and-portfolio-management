@@ -94,10 +94,3 @@ npm run dev
     *   `lib/`: Utility functions.
     *   `types/`: TypeScript type definitions.
 
-### Contributing
-
-Contributions are welcome! Please follow the standard GitHub flow: fork the repository, create a branch, make your changes, and submit a pull request.
-
-### License
-
-[Specify your project's license here]
